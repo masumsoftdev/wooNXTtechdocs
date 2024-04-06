@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vertical Tabs - WooCommerce Inventory Management System</title>
+<style>
+  /* Style the tab */
+  .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 200px;
+    float: left;
+  }
+
+  /* Style the buttons inside the tab */
+  .tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 12px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+
+  /* Create an active/current "tab button" class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    border: 1px solid #ccc;
+    border-top: none;
+    padding-left: 300px;
+    height: 100vh;
+  }
+</style>
+</head>
+<body>
+
+<div>
+    <h1 style="text-align: center;">Woo NXT Tech Docs (Initial Version)</h1>
+    <hr>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Introduction')">Introduction</button>
+        <button class="tablinks" onclick="openTab(event, 'SystemOverview')">System Overview</button>
+        <button class="tablinks" onclick="openTab(event, 'Architecture')">Architecture</button>
+        <button class="tablinks" onclick="openTab(event, 'Features')">Features</button>
+        <button class="tablinks" onclick="openTab(event, 'DatabaseSchema')">Database Schema</button>
+        <button class="tablinks" onclick="openTab(event, 'APIDocumentation')">API Documentation</button>
+        <button class="tablinks" onclick="openTab(event, 'Security')">Security</button>
+        <button class="tablinks" onclick="openTab(event, 'Deployment')">Deployment</button>
+        <button class="tablinks" onclick="openTab(event, 'Monitoring')">Monitoring and Maintenance</button>
+        <button class="tablinks" onclick="openTab(event, 'FutureImprovements')">Future Improvements</button>
+        <button class="tablinks" onclick="openTab(event, 'Contact')">Contact Information</button>
+      </div>
+      
+      <div id="Introduction" class="tabcontent">
+        <h3>Introduction</h3>
+        <p>This technical documentation provides an overview of the WooCommerce-Based Inventory Management System. This system is designed to facilitate inventory management for businesses using WooCommerce, a popular eCommerce platform built on WordPress.</p>
+      </div>
+</div>
+
+<div id="SystemOverview" class="tabcontent">
+  <h3>System Overview</h3>
+  <p>The Inventory Management System integrates seamlessly with WooCommerce, allowing businesses to manage their inventory directly from their WordPress dashboard. It provides functionalities for adding, updating, and tracking inventory items, as well as generating reports and managing stock levels.</p>
+</div>
+
+<div id="Architecture" class="tabcontent">
+  <h3>Architecture</h3>
+  <p>The system follows a modular architecture, consisting of the following components:
+- WordPress/WooCommerce
+- Inventory Management Plugin
+- Database
+- Frontend Interface</p>
+</div>
+
+<div id="Features" class="tabcontent">
+  <h3>Features</h3>
+  <p>The key features of the Inventory Management System include:
+- Product Management
+- Stock Management
+- Order Management
+- Reporting
+- User Roles and Permissions</p>
+</div>
+
+<div id="DatabaseSchema" class="tabcontent">
+  <h3>Database Schema</h3>
+  <p>The database schema includes the following tables:
+- Products
+- Orders
+- Transactions
+- Users</p>
+</div>
+
+<div id="APIDocumentation" class="tabcontent">
+  <h3>API Documentation</h3>
+  <p>The system provides RESTful APIs for integrating with external applications and services. API endpoints include:
+- Product Endpoints
+- Order Endpoints
+- Stock Endpoints</p>
+</div>
+
+<div id="Security" class="tabcontent">
+  <h3>Security</h3>
+  <p>Security measures implemented in the system include:
+- Authentication and Authorization
+- Data Encryption
+- Input Validation
+- Regular Security Audits</p>
+</div>
+
+<div id="Deployment" class="tabcontent">
+  <h3>Deployment</h3>
+  <p>The system can be deployed on a WordPress/WooCommerce hosting environment. Deployment steps include:
+- Install and configure WordPress/WooCommerce
+- Install the Inventory Management Plugin
+- Configure plugin settings and user roles
+- Import existing inventory data (if applicable)</p>
+</div>
+
+<div id="Monitoring" class="tabcontent">
+  <h3>Monitoring and Maintenance</h3>
+  <p>Monitoring and maintenance tasks include:
+- Regular Backups
+- Performance Monitoring
+- Plugin Updates
+- Security Patches</p>
+</div>
+
+<div id="FutureImprovements" class="tabcontent">
+  <h3>Future Improvements</h3>
+  <p>Potential future improvements for the system include:
+- Enhanced Reporting
+- Integration with External Systems
+- Inventory Forecasting
+- User Interface Enhancements</p>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact Information</h3>
+  <p>For further inquiries or support, please contact:
+
+  [WooNXT]  
+  [Email Address]  
+  [Phone Number]  
+  [Website URL]</p>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  // Get all elements with class="tabcontent" and hide them
+  var tabcontent = document.getElementsByClassName("tabcontent");
+  for (var i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  var tablinks = document.getElementsByClassName("tablinks");
+  for (var i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
